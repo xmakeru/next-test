@@ -1,0 +1,46 @@
+---возвращает текущий url---
+
+'use client'
+ 
+import { usePathname } from 'next/navigation'
+ 
+export default function ExampleClientComponent() {
+  const pathname = usePathname()
+  return <p>Current pathname: {pathname}</p>
+}
+
+---проверяет, активна ли ссылка---
+
+<Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">
+            Home
+          </Link>
+
+
+
+---Вы попадете на раздел "Settings" внутри вашего панели управления ("dashboard"). ---
+Это полезно, когда нужно напрямую ссылаться на определенный раздел страницы без необходимости скроллинга до него.
+
+<Link href="/dashboard#settings">Settings</Link>
+
+
+---Хук useRouterпозволяет программно менять маршруты---
+
+'use client'
+ 
+import { useRouter } from 'next/navigation'
+ 
+export default function Page() {
+  const router = useRouter()
+ 
+  return (
+    <button type="button" onClick={() => router.push('/dashboard')}>
+      Dashboard
+    </button>
+  )
+}
+
+
+---Suspense - про loading---
+
+
+---
