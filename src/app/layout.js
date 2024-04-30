@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
+import Header from "./components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,23 +10,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
+  return <>
     <html lang="en">
-      <body>
-        <header
-        style={{
-          backgroundColor: 'lightyellow'
-        }}>
-          <p>Header</p>
-        </header>
+      <body className="">
+
+        <Header/>    
+
         {children}
-        <footer
-        style={{
-          backgroundColor: 'gray'
-        }}>
-          <p>Footer</p>
+
+        {/* Footer */}
+
+        <footer>
+          <div className="flex justify-center">
+            <p>Footer</p>
+          </div>
         </footer>
       </body>
     </html>
-  );
+  </>
 }

@@ -1,4 +1,4 @@
-export default function Header() {
+export default function HeaderTask() {
     return (
         <div>
             <h1>TodoList</h1>

@@ -1,0 +1,5 @@
+npm install @headlessui/react     Popover
+
+npm install @heroicons/react      Heroicons, обязательно указывай в пути импорта react -- from "@heroicons/react/24/solid"
+
+

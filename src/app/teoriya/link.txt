@@ -43,4 +43,9 @@ export default function Page() {
 ---Suspense - про loading---
 
 
----
+---Динамическая маршрутизация--- ---ПОЧИТАТЬ ЕЩЕ, НАПРИМЕР ПРО ...slug---
+
+export default function Function({ params }) {
+  return <h1>Text {params.имя папкиId[] функции}</h1>
+}
+
