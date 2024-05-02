@@ -7,38 +7,46 @@ export default function MainContent() {
         <>
         <div className='mx-6'>
             <Tab.Group manual>
-                <Tab.List className='flex items-center justify-between mx-2 my-2 sm:mx-6 sm:my-4'>
-                    <Tab className=" ui-selected:bg-blue-500 ui-selected:text-white">
-                        <h2 className='tracking-widest'>Easy</h2>
+                <Tab.List className='flex items-center gap-2 justify-between mx-2 my-2 sm:mx-6 sm:my-4'>
+                    <Tab className="rounded-md w-1/3 ui-selected:bg-indigo-400 ui-selected:text-white hover:bg-indigo-300">
+                        <h2 className='tracking-widest text-xl'>Easy</h2>
                     </Tab>
-                    <Tab className="ui-selected:bg-blue-500 ui-selected:text-white">
-                        <h2 className='tracking-widest'>Normal</h2>
+                    <Tab className="rounded-md w-1/3 ui-selected:bg-indigo-400 ui-selected:text-white hover:bg-indigo-300">
+                        <h2 className='tracking-widest text-xl'>Normal</h2>
                     </Tab>
-                    <Tab className="ui-selected:bg-blue-500 ui-selected:text-white">
-                        <h2 className='tracking-widest'>Hard</h2>
+                    <Tab className="rounded-md w-1/3 ui-selected:bg-indigo-400 ui-selected:text-white  hover:bg-indigo-300">
+                        <h2 className='tracking-widest text-xl'>Hard</h2>
                     </Tab>
                 </Tab.List>
                 <Tab.Panels>
                     <Tab.Panel>
                         <div className='flex flex-col sm:flex-row items-center justify-between'>
-                            <div className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                            <Link href='./task' className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
-                                  <Link href='./task' className='p-2'>TaskToDoList</Link>
+                                  <h2 className='p-2'>TaskToDoList</h2>
                                 </div>
                                 <p>Список задач</p>
-                            </div>
-                            <div className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                            </Link>
+                            <Link href='./counter' className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'>
-                                  <Link href='./counter' className='p-2'>Counter</Link>  
+                                  <h2 className='p-2'>Counter</h2>
                                 </div>
                                 <p>Счетчик</p>
-                            </div>
-                            <div className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                            </Link>
+                            <Link href='./calculator' className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'>
-                                  <Link href='./calculator' className='p-2'>Calculator</Link>
+                                  <h2 className='p-2'>Calculator</h2>
                                 </div>
                                 <p>Калькулятор</p>
-                            </div>
+                            </Link>
+                        </div>
+                        <div className='flex flex-col sm:flex-row items-center justify-between'>
+                            <Link href='./card-slider' className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                                <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
+                                  <h2 className='p-2'>CardSlider</h2>
+                                </div>
+                                <p>Слайдер карточек</p>
+                            </Link>
                         </div>
                     </Tab.Panel>
                     <Tab.Panel>

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function header() {
     return <>
-        <header className="bg-indigo-300">
+        <header className="bg-indigo-300 border-b-2 border-indigo-400 shadow-lg p-2">
 
           <nav className="flex justify-between items-center w-[92%] m-auto">
             <div>
@@ -38,7 +38,7 @@ export default function header() {
             </div>
 
             <div className="hidden sm:block">
-              <button className="bg-fuchsia-300 text-white px-5 py-2 rounded-3xl hover:bg-fuchsia-400">Sign In</button>
+              <button className="bg-fuchsia-300 text-white px-5 py-2 rounded-3xl hover:bg-fuchsia-400 hover:transition delay-100">Sign In</button>
             </div>
 
           </nav>
