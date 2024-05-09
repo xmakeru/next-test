@@ -41,11 +41,11 @@ export default function MainContent() {
                             </Link>
                         </div>
                         <div className='flex flex-col sm:flex-row items-center justify-between'>
-                            <Link href='./card-slider' className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                            <Link href='./image-slider' className='bg-sky-100 rounded-md sm:w-1/3 h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
-                                  <h2 className='p-2'>CardSlider</h2>
+                                  <h2 className='p-2'>ImageSlider</h2>
                                 </div>
-                                <p>Слайдер карточек</p>
+                                <p>Слайдер картинок</p>
                             </Link>
                         </div>
                     </Tab.Panel>
