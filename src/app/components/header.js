@@ -1,5 +1,6 @@
 'use client'
 import PopoverHeader from "./PopoverHeader"
+import { motion } from "framer-motion"
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
@@ -38,8 +39,12 @@ export default function header() {
             </div>
 
             <div className="hidden sm:block">
-              <button className="bg-fuchsia-300 text-white px-5 py-2 rounded-3xl border-2 border-fuchsia-500
-              hover:scale-125 transition duration-500 hover:bg-fuchsia-500">Sign In</button>
+              <motion.button className="bg-fuchsia-300 text-white px-5 py-2 rounded-3xl border-2 border-fuchsia-500"
+              whileTap={{scale: 0.9}}
+              whileHover={{scale:1.1, backgroundColor: 'rgb(217 70 239)', color: 'black'}}
+              transition={{bounceDamping: 10, bounceStiffness: 600}}
+              >Sign In
+              </motion.button>
             </div>
 
           </nav>

@@ -1,5 +1,6 @@
 'use client'
 import { Tab } from '@headlessui/react'
+import { motion } from "framer-motion"
 import Link from 'next/link'
 import { StarIcon } from "@heroicons/react/24/outline";
 import { StarIcon as StarIconPointed } from "@heroicons/react/24/solid";
@@ -8,31 +9,37 @@ import { StarIcon as StarIconPointed } from "@heroicons/react/24/solid";
 export default function MainContent() {
     return (
         <>
-        <div className='mx-6'>
+        <motion.div 
+        variants={{
+        hidden: {opacity: 0},
+        show: {opacity: 1}}}
+        initial='hidden'
+        animate='show'
+        className='mx-6'>
             <Tab.Group manual>
                 <Tab.List className='flex items-center gap-2 justify-between mx-2 my-2 sm:mx-6 sm:my-4'>
                     <Tab className="rounded-md w-1/3 ui-selected:bg-indigo-400 ui-selected:text-white hover:bg-indigo-300">
                         <div className='inline-flex items-center'>
                           <h2 className='tracking-widest text-xl'>Easy</h2>
-                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden sm:block" />
-                          <StarIcon className="h-6 w-6 text-yellow-500 hidden sm:block" />
-                          <StarIcon className="h-6 w-6 text-yellow-500 hidden sm:block" />
+                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
+                          <StarIcon className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
+                          <StarIcon className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
                         </div>
                     </Tab>
                     <Tab className="rounded-md w-1/3 ui-selected:bg-indigo-400 ui-selected:text-white hover:bg-indigo-300">
                     <div className='inline-flex items-center'>
                           <h2 className='tracking-widest text-xl'>Medium</h2>
-                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden sm:block" />
-                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden sm:block" />
-                          <StarIcon className="h-6 w-6 text-yellow-500 hidden sm:block" />
+                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
+                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
+                          <StarIcon className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
                         </div>
                     </Tab>
                     <Tab className="rounded-md w-1/3 ui-selected:bg-indigo-400 ui-selected:text-white  hover:bg-indigo-300">
                     <div className='inline-flex items-center'>
                           <h2 className='tracking-widest text-xl'>Hard</h2>
-                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden sm:block" />
-                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden sm:block" />
-                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden sm:block" />
+                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
+                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
+                          <StarIconPointed className="h-6 w-6 text-yellow-500 hidden transition hover:-translate-y-1 sm:block" />
                         </div>
                     </Tab>
                 </Tab.List>
@@ -92,7 +99,7 @@ export default function MainContent() {
                     </Tab.Panel>
                 </Tab.Panels>
             </Tab.Group>
-        </div>
+        </motion.div>
         
         </>
     )
