@@ -1,8 +1,11 @@
-import { Inter } from "next/font/google";
+import { Poppins } from 'next/font/google'
 import "./globals.css"
 import Header from "./components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "test",
@@ -13,18 +16,20 @@ export default function RootLayout({ children }) {
   return <>
     <html lang="en">
       <body className="bg-indigo-200">
+        <div className={poppins.className}>
 
-        <Header/>    
+          <Header/>    
 
-        <main className="h-screen">
-        {children}
-        </main>
+          <main className="h-screen">
+          {children}
+          </main>
 
-        <footer>
-          <div className="flex justify-center items-center h-16">
-            <p>Footer</p>
-          </div>
-        </footer>
+          <footer>
+            <div className="flex justify-center items-center h-16">
+              <p>Footer</p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   </>

@@ -38,7 +38,8 @@ export default function header() {
             </div>
 
             <div className="hidden sm:block">
-              <button className="bg-fuchsia-300 text-white px-5 py-2 rounded-3xl hover:bg-fuchsia-400 hover:transition delay-100">Sign In</button>
+              <button className="bg-fuchsia-300 text-white px-5 py-2 rounded-3xl border-2 border-fuchsia-500
+              hover:scale-125 transition duration-500 hover:bg-fuchsia-500">Sign In</button>
             </div>
 
           </nav>

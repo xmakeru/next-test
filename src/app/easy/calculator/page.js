@@ -3,8 +3,8 @@ import { useState } from "react"
 export default function Calculator() {
   const [value, setValue] = useState('')
     return <> 
-        <div className="flex justify-center bg-pink-100">
-          <div className="bg-white p-2 rounded-md my-2 shadow-2xl sm:my-4">
+        <div className="flex justify-center bg-pink-100 h-full">
+          <div className="bg-white h-[350px] p-2 rounded-md my-2 shadow-2xl sm:my-4">
               <form>
                 <div className="mb-2 ">
                   <input type='text' className="w-full text-2xl text-right border-2 border-pink-100 rounded-md" value={value}/>
