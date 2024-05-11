@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.19",
@@ -16,7 +17,7 @@
     "boxicons": "^2.1.4",
     "framer-motion": "^11.1.9",
     "heroicons-react": "^1.4.1",
-    "next": "14.1.4",
+    "next": "^14.1.4",
     "react": "^18",
     "react-dom": "^18"
   },

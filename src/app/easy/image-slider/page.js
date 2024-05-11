@@ -35,7 +35,7 @@ export default function ImageSlider() {
               <Image key={url} src={url} 
               style={{ 
               translate: `${-100 * imageIndex}%`,  
-              transition: 'translate 300ms ease-in-out'}} />
+              transition: "translate 300ms ease-in-out"}} />
             ))}
         </div>
         <button onClick={showPrevImage} className='absolute inset-y-0 left-0 
