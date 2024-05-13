@@ -1,6 +1,5 @@
 'use client'
 import { Tab } from '@headlessui/react'
-import { motion } from "framer-motion"
 import Link from 'next/link'
 import { StarIcon } from "@heroicons/react/24/outline";
 import { StarIcon as StarIconPointed } from "@heroicons/react/24/solid";
@@ -9,7 +8,7 @@ import { StarIcon as StarIconPointed } from "@heroicons/react/24/solid";
 export default function MainContent() {
     return (
         <>
-        <motion.div 
+        <div 
         variants={{
         hidden: {opacity: 0},
         show: {opacity: 1}}}
@@ -99,7 +98,7 @@ export default function MainContent() {
                     </Tab.Panel>
                 </Tab.Panels>
             </Tab.Group>
-        </motion.div>
+        </div>
         
         </>
     )
