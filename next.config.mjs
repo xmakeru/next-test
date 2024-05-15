@@ -3,8 +3,7 @@ const nextConfig = {
 
     reactStrictMode:true,
     assetPrefix:'',
-    productionBrowserSourceMaps: false,
-    output: "export"
+    productionBrowserSourceMaps: false
 };
 
 export default nextConfig;
