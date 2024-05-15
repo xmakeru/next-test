@@ -1,0 +1,9 @@
+{
+  "/easy/counter/page": "app/easy/counter/page.js",
+  "/easy/image-slider/page": "app/easy/image-slider/page.js",
+  "/easy/task/page": "app/easy/task/page.js",
+  "/medium/test-animation/page": "app/medium/test-animation/page.js",
+  "/easy/calculator/page": "app/easy/calculator/page.js",
+  "/page": "app/page.js",
+  "/_not-found": "app/_not-found.js"
+}
