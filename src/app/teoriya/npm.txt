@@ -1,5 +1,9 @@
-npm install @headlessui/react     Popover
+npm i @headlessui/react     Popover
 
-npm install @heroicons/react      Heroicons, обязательно указывай в пути импорта react -- from "@heroicons/react/24/solid"
+npm i @heroicons/react      Heroicons, обязательно указывай в пути импорта react -- from "@heroicons/react/24/solid"
 
+npm i autoprefixer --save-dev
 
+npm i framer-motion
+
+npm i sharp
