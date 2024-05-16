@@ -1,8 +1,10 @@
+'use client'
+
 import React, { useState } from 'react';
-import Filter from './Filter';
-import HeaderTask from './HeaderTask';
-import Input from './Input';
-import Task from './Task';
+import Filter from './components/Filter';
+import HeaderTask from './components/HeaderTask';
+import Input from './components/Input';
+import Task from './components/Task';
 
 export default function TaskManager() {
   const [todo, setTodo] = useState('');
