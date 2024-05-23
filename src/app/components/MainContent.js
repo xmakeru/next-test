@@ -3,7 +3,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import Link from 'next/link'
 import { StarIcon } from "@heroicons/react/24/outline";
 import { StarIcon as StarIconPointed } from "@heroicons/react/24/solid";
-
+import {motion, useTransform} from 'framer-motion'
 
 export default function MainContent() {
     return (
@@ -93,9 +93,9 @@ export default function MainContent() {
                             </Link>
                         </div>
                     </TabPanel>
-                    <Tab.Panel>
+                    <TabPanel>
                       <h3>Content3</h3>
-                    </Tab.Panel>
+                    </TabPanel>
                 </TabPanels>
             </TabGroup>
         </div>

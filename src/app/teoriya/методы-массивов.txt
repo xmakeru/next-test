@@ -1,0 +1,33 @@
+.forEach
+people = {obj}
+people.forEach(person => console.log(person)) -- выведет все элементы объекта или массива
+
+.map
+const newPeople = people.map(person => return 'Hello' ) -- позволяет изменить каждый итерируемый элемент 
+и создать новый массив/объект. Здесь будет новый объект из строчек 'Hello'
+const newPeople = people.map( preson => {
+    return person.name
+})  -- здесь получим объект из имен people
+
+.filter
+const adults = people.filter(person => {
+    if (person.age >= 18 {
+        return true -- используется для указания, что текущий объект person должен быть включен в массив, если условие выполнено
+    } else {
+        return false
+    }
+    )
+})
+const adults = people.filter(person => person.age >= 18) -- тоже самое
+
+.reduce -- посчитать что-то финальное
+const amount = people.reduce((total, person) => total + person.budget, 0) -- на каждой итерации меняем значение total, 
+0 значение по умолчанию, можно менять
+
+.find
+const igor = people.find(person => person.name === 'Игорь') -- ищем значение элемента
+
+.findIndex
+const igorIndex = people.findIndex(person => person.name === 'Игорь') -- ищем индекс элемента
+
+
