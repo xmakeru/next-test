@@ -49,7 +49,7 @@ export default function MainContent() {
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
                                   <h2 className='p-2'>TaskToDoList</h2>
                                 </div>
-                                <p>Список задач</p>
+                                <p className='text-rose-500'>В разработке</p>
                             </Link>
                             <Link href='easy/counter' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'>
@@ -77,7 +77,7 @@ export default function MainContent() {
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
                                   <h2 className='p-2'>TestAnimation</h2>
                                 </div>
-                                <p>Тестовая анимация</p>
+                                <p className='text-rose-500'>В разработке</p>
                             </Link>
                             <Link href='medium/test-api' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'>
@@ -85,11 +85,11 @@ export default function MainContent() {
                                 </div>
                                 <p>Тестовый API</p>
                             </Link>
-                            <Link href='' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                            <Link href='medium/posts-list' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'>
-                                  <h2 className='p-2'></h2>
+                                  <h2 className='p-2'>PostsList</h2>
                                 </div>
-                                <p></p>
+                                <p>Список постов</p>
                             </Link>
                         </div>
                     </TabPanel>

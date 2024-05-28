@@ -12,18 +12,15 @@ export default function PopoverHeader() {
         
     <Popover.Panel className='absolute z-10 bg-white w-screen shadow-md'>
         <div className='bg-color-yellow-100'>
-            <ul>
+            <ul className='bg-slate-600 text-white p-6'>
                 <li>
-                    1
+                    1111
                 </li>
                 <li>
-                    22
+                    2222
                 </li>
                 <li>
-                    333
-                </li>
-                <li>
-                    4444
+                    3333
                 </li>
             </ul>
         </div>

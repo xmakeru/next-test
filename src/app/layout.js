@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
           {children}
           </main>
 
-          <footer>
+          {/* <footer>
             <div className="flex justify-center items-center h-16">
               <p>Footer</p>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </body>
     </html>

@@ -3,6 +3,7 @@ import PopoverHeader from "./PopoverHeader"
 import { motion } from "framer-motion"
 import Link from "next/link";
 
+
 export default function header() {
     return <>
         <header className="bg-indigo-300 border-b-2 border-indigo-400 shadow-lg p-2">
@@ -21,17 +22,71 @@ export default function header() {
             </div>
             <div>
               <ul className="hidden sm:flex items-center gap-[4vw]">
-                <li className="hover:text-gray-500 cursor-pointer">
-                  1
+                <li className="hover:text-gray-500 cursor-pointer group relative">
+                  <div className="px-10 hover:bg-indigo-400 rounded-t">easy</div>
+                  <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
+                    <div className="flex flex-col text-nowrap">
+                      <li>
+                        <Link href='/easy/task'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">task</div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/easy/counter'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">counter</div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/easy/calculator'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">calculator</div>
+                        </Link>
+                      </li>
+                    </div>
+                  </ul>
                 </li>
-                <li className="hover:text-gray-500 cursor-pointer">
-                  22
+                <li className="hover:text-gray-500 cursor-pointer group relative">
+                  <div className="px-10 hover:bg-indigo-400 rounded-t">medium</div>
+                  <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
+                    <div className="flex flex-col text-nowrap">
+                      <li>
+                        <Link href='/medium/test-animation'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">test-animation</div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/medium/test-api'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">test-api</div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/medium/posts-list'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">posts-list</div>
+                        </Link>
+                      </li>
+                    </div>
+                  </ul>
                 </li>
-                <li className="hover:text-gray-500 cursor-pointer">
-                  333
-                </li>
-                <li className="hover:text-gray-500 cursor-pointer">
-                  4444
+                <li className="hover:text-gray-500 cursor-pointer group relative">
+                  <div className="px-10 hover:bg-indigo-400 rounded-t">hard</div>
+                  <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
+                    <div className="flex flex-col text-nowrap">
+                      <li>
+                        <Link href='/hard/'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">_3</div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/hard/'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">_3</div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/hard/'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">_3</div>
+                        </Link>
+                      </li>
+                    </div>
+                  </ul>
                 </li>
               </ul>
             </div>
