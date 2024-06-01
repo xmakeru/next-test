@@ -2,10 +2,16 @@
 import { delay, motion } from "framer-motion"
 
 export default function TestAnimation() {
+    
+    const variants = {
+        visible: { opacity: 1, scale: [1.2, 1], x: [100, 0] },
+        hidden: { opacity: 0 },
+      }
+
     return (
       <>
-      <div className="flex flex-col gap-10">
-        <div className="grid grid-cols-3 p-10 gap-10">
+      <div className="">
+        <div className="flex m-10 justify-around">
           <motion.div 
           className="bg-[#0A2239] w-[350px] h-[350px] rounded-md"
           animate={{ 
@@ -23,12 +29,37 @@ export default function TestAnimation() {
           />
           <motion.div 
           className="bg-[#0A2239] w-[350px] h-[350px] rounded-md flex flex-wrap items-center p-2">
-            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"></motion.div>
-            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"></motion.div>
-            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"></motion.div>
-            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"></motion.div>
+            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{
+            duration: 2,
+            delay: 1
+          }}></motion.div>
+            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{
+            duration: 2,
+            delay:1.5
+          }}></motion.div>
+            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{
+            duration: 2,
+            delay: 2
+          }}></motion.div>
+            <motion.div className="bg-[#176087] w-[150px] h-[150px] m-2 rounded"initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{
+            duration: 2,
+            delay: 2.5
+          }}></motion.div>
           </motion.div>
-          <motion.div className="bg-[#0A2239] w-[350px] h-[350px] rounded-md"/>
+          <motion.div 
+          className="bg-[#0A2239] w-[350px] h-[350px] rounded-md"/>
         </div>
       </div>
       </>
