@@ -8,7 +8,7 @@ export default function TaskTest() {
     const [taskValue, setTaskValue] = useState('')
     const [taskList, setTaskList] = useState([])
     const [statusTask, setStatusTask] = useState('')
-    let copiedTaskList = []
+    let copiedTaskList = taskList
 
     useEffect(() => {
       let savedTaskList = localStorage.getItem('tasks')
