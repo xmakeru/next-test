@@ -6,17 +6,22 @@ export default function Counter() {
   const [count, setCount] = useState(0)
   
     return <>
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex justify-center">
+    <div className="flex flex-col justify-center items-center my-[10%] bg-slate-400 py-36 px-24  rounded-full">
+        <div className="flex flex-col items-center text-2xl py-2">
         <h1>Counter</h1>
         {count}
-        <div>
-            
+        <div>  
             <button onClick={() => setCount(count + 1)}
-            className="bg-green-400 rounded-full">+ Plus</button>
+            className="bg-green-400 rounded-full mx-2 p-2">+ Plus</button>
 
             <button onClick={() => setCount(count - 1)}
-            className="bg-red-400 rounded-full">Minus -</button>
+            className="bg-red-400 rounded-full mx-2 p-2">Minus -</button>
         </div>
+        </div>
+        
     </div>
+    </div>
+    
     </>
 }

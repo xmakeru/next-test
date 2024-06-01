@@ -27,11 +27,6 @@ export default function header() {
                   <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
                     <div className="flex flex-col text-nowrap">
                       <li>
-                        <Link href='/easy/task'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">task</div>
-                        </Link>
-                      </li>
-                      <li>
                         <Link href='/easy/counter'>
                           <div className="hover:bg-indigo-300 px-6 rounded">counter</div>
                         </Link>
@@ -39,6 +34,14 @@ export default function header() {
                       <li>
                         <Link href='/easy/calculator'>
                           <div className="hover:bg-indigo-300 px-6 rounded">calculator</div>
+                        </Link>
+                      </li>
+                        <Link href="/easy/image-slider">
+                          <div className="hover:bg-indigo-300 px-6 rounded">image-slider</div>
+                        </Link>
+                      <li>
+                        <Link href='/easy/test-task'>
+                          <div className="hover:bg-indigo-300 px-6 rounded">test-task</div>
                         </Link>
                       </li>
                     </div>

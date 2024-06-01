@@ -9,9 +9,8 @@ export async function generateMetadata({params}) {
 }
 
 async function fetchData(id) {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts/' + id) 
-    const result = await res.json()  
-    return result
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)   
+    return res.json()
   }
 
 export default async function PostPage({params}) {

@@ -45,12 +45,6 @@ export default function MainContent() {
                 <TabPanels>
                     <TabPanel>
                         <div className=' flex flex-col items-center justify-between sm:grid sm:grid-cols-3 sm:gap-3'>
-                            <Link href='easy/task' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
-                                <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
-                                  <h2 className='p-2'>TaskToDoList</h2>
-                                </div>
-                                <p className='text-rose-500'>В разработке</p>
-                            </Link>
                             <Link href='easy/counter' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
                                 <div className='bg-blue-200 w-full flex justify-center rounded-t-md'>
                                   <h2 className='p-2'>Counter</h2>
@@ -68,6 +62,12 @@ export default function MainContent() {
                                   <h2 className='p-2'>ImageSlider</h2>
                                 </div>
                                 <p>Слайдер картинок</p>
+                            </Link>
+                            <Link href='easy/test-task' className='bg-sky-100 rounded-md h-[200px] flex flex-col items-center m-1 hover:border-2 hover:border-blue-300 w-full'>
+                                <div className='bg-blue-200 w-full flex justify-center rounded-t-md'> 
+                                  <h2 className='p-2'>task-test</h2>
+                                </div>
+                                <p>task-test</p>
                             </Link>
                         </div>
                     </TabPanel>
