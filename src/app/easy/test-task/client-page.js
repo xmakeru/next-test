@@ -17,7 +17,8 @@ export default function TaskTest() {
     }
 }, [])
 
-    const addTask = () => {
+    const addTask = (e) => {
+      e.preventDefault()
       if (taskValue.trim() === '') {
         return
         }
@@ -65,13 +66,13 @@ export default function TaskTest() {
     return (
       <>
       <div>
-        <div className="flex justify-center gap-6 m-2">
+        <form onSubmit={addTask} className="flex justify-center gap-6 m-2">
           <input 
           value={taskValue} 
           className="rounded w-[100vh] h-[40px]"
           onChange={(e) => setTaskValue(e.target.value)}></input>
           <motion.button
-          onClick={addTask}
+          type="submit"
           className="text-xl bg-green-200 hover:bg-green-300 rounded-xl p-2"
           whileTap={{scale: 0.8}}
           whileHover={{scale: 1.1}}
@@ -82,7 +83,7 @@ export default function TaskTest() {
           whileTap={{scale: 0.8}}
           whileHover={{scale: 1.1}}
           >DeleteAll</motion.button>
-        </div>
+        </form>
         <div className="flex justify-center">
           <button className="hover:bg-slate-400 w-1/5 rounded"
           onClick={() => setStatusTask('all')}>all</button>

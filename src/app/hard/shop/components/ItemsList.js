@@ -1,0 +1,36 @@
+import satoru from '../../../../../public/shop.jpeg'
+import chel from '../../../../../public/shop-2.jpeg'
+import toji from '../../../../../public/shop-3.jpeg'
+
+export const itemList = [
+  {id: 1, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: 'New'},
+  {id: 2, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: 'New'},
+  {id: 3, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: 'New'},
+  {id: 4, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: ['New', 'Popular'],},
+  {id: 5, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: ['New', 'Popular'],},
+  {id: 6, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: ['New', 'Popular'],},
+  {id: 7, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: 'Rare'},
+  {id: 8, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: ['New', 'Rare'],},
+  {id: 9, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: satoru, cat: ['New', 'Rare'],},
+  {id: 11, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Rare'],},
+  {id: 12, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Rare'],},
+  {id: 13, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Rare'],},
+  {id: 14, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Hot'],},
+  {id: 15, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Rare'],},
+  {id: 16, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Rare'],},
+  {id: 17, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'Rare'],},
+  {id: 18, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: chel, cat: ['New', 'RHot'],},
+  {id: 19, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Hot'],},
+  {id: 20, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 21, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Hot'],},
+  {id: 22, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 23, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 24, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 25, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['Hot', 'Rare'],},
+  {id: 26, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 27, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Hot'],},
+  {id: 28, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['Hot', 'Rare'],},
+  {id: 29, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 30, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['New', 'Rare'],},
+  {id: 31, title: 'item', description: 'itemDescription', price: 10.5, imageUrl: toji, cat: ['Hot', 'Rare'],},
+]

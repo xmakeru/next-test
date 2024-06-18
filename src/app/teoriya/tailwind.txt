@@ -8,3 +8,10 @@
 
 stroke- --- цвет обводки SVG
 fill --- заливка SVG
+
+className={
+                                `${category === 'New' ? 'text-blue-500' : 
+                                category === 'Popular' ? 'text-red-500' : 
+                                category === 'Rare' ? 'text-green-500' : 
+                                category === 'Hot' ? 'text-yellow-500' : ''}
+                                p-2 bg-teal-200 rounded-md w-1/2`}

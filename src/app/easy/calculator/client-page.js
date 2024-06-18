@@ -40,7 +40,6 @@ export default function Calculator() {
                 </div>
               </form>
            </div>
-        </div>
-        <p className="font-bold">Доработать без eval()</p>
-    </>
+        </div>   
+         </>
 }

@@ -23,12 +23,6 @@ export default function RootLayout({ children }) {
           <main className="h-screen">
           {children}
           </main>
-
-          {/* <footer>
-            <div className="flex justify-center items-center h-16">
-              <p>Footer</p>
-            </div>
-          </footer> */}
         </div>
       </body>
     </html>
