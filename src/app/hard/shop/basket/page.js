@@ -6,11 +6,26 @@ import Link from "next/link"
 export default function Basket() {
   
   const [basketList, setBasketList] = useState([])
+  const [countMoney, setCountMoney] = useState(0)
   
-  const delBasketList = (item) => {
+  const delBasketList = () => {
+    const totalPrice = basketList.reduce((total, item) => total + item.price, 0);
     setBasketList([])
-    localStorage.setItem('basketList', [])
-}
+    localStorage.setItem('basketList', JSON.stringify([]))
+    const currentMoney = Number(localStorage.getItem('balance')) || 0
+    const newBalance = currentMoney + totalPrice
+    setCountMoney(newBalance)
+    localStorage.setItem('balance', newBalance.toString())
+  }
+
+  const delItemFromBasket = (item) => {
+    const newBasketList = basketList.filter((basketItem) => basketItem.id !== item.id)
+    setBasketList(newBasketList)
+    localStorage.setItem('basketList', JSON.stringify(newBasketList))
+    const newBalance = (Number(localStorage.getItem('balance')) || 0 ) + item.price
+    setCountMoney(newBalance)
+    localStorage.setItem('balance', newBalance.toString())
+  }
 
   useEffect(() => {
     const savedBasketList = localStorage.getItem('basketList')
@@ -61,6 +76,9 @@ export default function Basket() {
                       {item.cat}
                     </h4>}
                 </div>
+                <button 
+                onClick={() => delItemFromBasket(item)}
+                className="">delete</button>
               </div>
             </li>
           ))}
@@ -72,7 +90,7 @@ export default function Basket() {
         <button
           onClick={() => delBasketList()}
           className='bg-rose-400 rounded-md p-2 hover:scale-105 active:scale-75 transition-all duration-300 hover:bg-rose-500'>
-            удалить
+            delete all
         </button>
       </div>
     </>

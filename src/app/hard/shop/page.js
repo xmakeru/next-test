@@ -12,6 +12,7 @@ export default function Shop() {
   const [filteredItems, setFilteredItems] = useState(itemList)
   const [basketList, setBasketList] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
+  const [countMoney, setCountMoney] = useState(0)
   const pageSize = 9
   //Индекс первого и последнего индекса текущей страницы. Например, на странице 2 - индекс последнего элемента от массива будет
   //2 * 8 = 16, а первого 16- 8 = 8
@@ -35,6 +36,13 @@ export default function Shop() {
     }
 }, [])
 
+  useEffect(() => {
+    let savedBalance = localStorage.getItem('balance')
+    if (savedBalance) {
+        setCountMoney(Number(savedBalance));
+    }
+  }, [])
+
 const handleSearch = (e) => {
     e.preventDefault()
     const filtered = itemList.filter(item => {
@@ -53,27 +61,45 @@ const handleSearch = (e) => {
   }
 
   const addItemToBasket = (item) => {
-    setBasketList(prevBasketList => [...prevBasketList, item])
-    localStorage.setItem('basketList', JSON.stringify([...basketList, item]))
-}
+    if (countMoney >= item.price) {
+      setBasketList(prevBasketList => [...prevBasketList, item])
+      localStorage.setItem('basketList', JSON.stringify([...basketList, item]))
+      setCountMoney(prevCount => prevCount - item.price)
+      localStorage.setItem('balance', countMoney - item.price)
+    } else {
+      alert('У вас недостаточно средств для покупки этого предмета.')
+    }
+  }
 
-  const delBasketList = (item) => {
+  const delBasketList = () => {
+    const totalPrice = basketList.reduce((total, item) => total + item.price, 0);
     setBasketList([])
-    localStorage.setItem('basketList', [])
-}
+    localStorage.setItem('basketList', JSON.stringify([]))
+    const currentMoney = Number(localStorage.getItem('balance')) || 0
+    const newBalance = currentMoney + totalPrice
+    setCountMoney(newBalance)
+    localStorage.setItem('balance', newBalance.toString())
+  }
+
+  const delItemFromBasket = (item) => {
+    const newBasketList = basketList.filter((basketItem) => basketItem.id !== item.id)
+    setBasketList(newBasketList)
+    localStorage.setItem('basketList', JSON.stringify(newBasketList))
+    const newBalance = (Number(localStorage.getItem('balance')) || 0 ) + item.price
+    setCountMoney(newBalance)
+    localStorage.setItem('balance', newBalance.toString())
+  }
 
   return (
     <>
     {/* Корзина */}
     <div className='bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500'>
-      <div className='flex items-center gap-4  p-2'>
-        <Popover 
-        className='bg-blue-300 rounded-md hover:bg-blue-500 hover:scale-105 active:scale-75 transition-all duration-200'
-        >
+      <div className='flex items-center gap-4 p-2'>
+        <Popover>
           <PopoverButton>
             <svg xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 24 24" 
-            className='w-12'>
+            className='w-12 h-[55px] bg-blue-300 rounded-md hover:bg-blue-500 hover:scale-105 active:scale-75 transition-all duration-200'>
             <path d="M21 9h-1.42l-3.712-6.496-1.736.992L17.277 9H6.723l3.146-5.504-1.737-.992L4.42 9H3a1.001 1.001 0 0 0-.965 1.263l2.799 10.264A2.005 2.005 0 0 0 6.764 22h10.473c.898 0 1.692-.605 1.93-1.475l2.799-10.263A.998.998 0 0 0 21 9zm-3.764 11v1-1H6.764L4.31 11h15.38l-2.454 9z"></path>
             <path d="M9 13h2v5H9zm4 0h2v5h-2z"></path></svg>
           </PopoverButton>
@@ -130,6 +156,9 @@ const handleSearch = (e) => {
                                 {item.cat}
                                 </h4>}
                                </div>
+                               <button
+                               onClick={() => delItemFromBasket(item)}
+                               className=''>delete</button>
                                </div>
                             </li>
                         ))}
@@ -142,14 +171,14 @@ const handleSearch = (e) => {
               <button
               onClick={() => delBasketList()}
               className='bg-rose-400 rounded-md p-2 hover:scale-105 active:scale-75 transition-all duration-300 hover:bg-rose-500'>
-                удалить</button>
+                delete all</button>
             </div>
         </div>
         </PopoverPanel>
         </Transition>
         </Popover>
         <Link href='/hard/shop/basket'
-        className='bg-blue-300 p-2 rounded-md h-[55px] hover:bg-blue-500 hover:scale-105 active:scale-75 transition-all duration-300'
+        className='bg-blue-300 p-2 mt-[-6px] rounded-md h-[55px] hover:bg-blue-500 hover:scale-105 active:scale-75 transition-all duration-300'
         >перейти в корзину</Link>
         <form onSubmit={handleSearch} className="text-center w-full">
           <input
@@ -161,7 +190,7 @@ const handleSearch = (e) => {
           />
           <button type="submit" className="ml-2 p-2 text-white bg-blue-300 hover:scale-105 active:scale-75 transition-all duration-300 rounded-md">Search</button>
         </form>
-        <WalletComponent />
+        <WalletComponent countMoney={countMoney}/>
         </div>
         <div className="flex justify-center my-4">
         <RenderPageButtons 

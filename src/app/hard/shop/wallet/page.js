@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import anton from '../../../../../public/anton.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,9 +8,20 @@ export default function Wallet() {
 
   const [countMoney, setCountMoney] = useState(0)
 
+  useEffect(() => {
+    let savedBalance = localStorage.getItem('balance')
+    if (savedBalance) {
+        setCountMoney(Number(savedBalance));
+    }
+  }, [])
+
   const addMoney = () => {
-    setCountMoney(prevCount => prevCount + 1)
-}
+    setCountMoney(prevCount => {
+      const newCount = prevCount + 1
+      localStorage.setItem('balance', newCount)
+      return newCount
+    })
+  }
 
   return(
     <>
