@@ -8,6 +8,24 @@ import RenderPageButtons from './components/RenderPageButtons'
 import WalletComponent from './components/Wallet'
 
 export default function Shop() {
+
+  useEffect(() => {
+    let savedBasketList = localStorage.getItem('basketList')
+    if (savedBasketList) {
+        setBasketList(JSON.parse(savedBasketList));
+    } else {
+      setBasketList([])
+    }
+}, [])
+
+  useEffect(() => {
+    let savedBalance = localStorage.getItem('balance')
+    if (savedBalance) {
+        setCountMoney(Number(savedBalance));
+    } else {
+      setCountMoney(0)
+    }
+  }, [])
   const [search, setSearch] = useState('')
   const [filteredItems, setFilteredItems] = useState(itemList)
   const [basketList, setBasketList] = useState([])
@@ -29,23 +47,7 @@ export default function Shop() {
     setCurrentPage(pageNumber)
   }
 
-  useEffect(() => {
-    let savedBasketList = localStorage.getItem('basketList')
-    if (savedBasketList) {
-        setBasketList(JSON.parse(savedBasketList));
-    } else {
-      setBasketList([])
-    }
-}, [])
-
-  useEffect(() => {
-    let savedBalance = localStorage.getItem('balance')
-    if (savedBalance) {
-        setCountMoney(Number(savedBalance));
-    } else {
-      setCountMoney(0)
-    }
-  }, [])
+  
 
 const handleSearch = (e) => {
     e.preventDefault()
