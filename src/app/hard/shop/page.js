@@ -13,18 +13,14 @@ export default function Shop() {
     let savedBasketList = localStorage.getItem('basketList')
     if (savedBasketList) {
         setBasketList(JSON.parse(savedBasketList));
-    } else {
-      setBasketList([])
-    }
+    } 
 }, [])
 
   useEffect(() => {
     let savedBalance = localStorage.getItem('balance')
     if (savedBalance) {
         setCountMoney(Number(savedBalance));
-    } else {
-      setCountMoney(0)
-    }
+    } 
   }, [])
   const [search, setSearch] = useState('')
   const [filteredItems, setFilteredItems] = useState(itemList)
