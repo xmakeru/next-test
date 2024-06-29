@@ -23,7 +23,7 @@ const navLinksHard = [
   {name: "shop", href: "/hard/shop"},
 ]
 
-export default function header() {
+export default function Header() {
 
     const pathname = usePathname()
 
