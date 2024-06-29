@@ -1,6 +1,5 @@
 'use client'
-import { useInView } from 'react-intersection-observer';
-import { useRef } from 'react'
+import { useInView } from 'react-intersection-observer'
 import {
   useScroll,
   motion,
