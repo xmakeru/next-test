@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function Basket() {
   
@@ -33,11 +34,16 @@ export default function Basket() {
       setBasketList(JSON.parse(savedBasketList))
     }
   }, [])
+  
+  const router = useRouter()
+  function goBack() {
+    router.back()
+  }
 
   return(
     <>
     <h1 className="my-2 text-center">Basket</h1>
-    <Link href='./'>Back</Link>
+    <button onClick={goBack}>back</button>
       {basketList && basketList.length > 0 ? (
         <ul className='grid grid-cols-3 gap-4 my-4'>
           {basketList.map((item, index) => (

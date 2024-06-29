@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import anton from '../../../../../public/anton.jpg'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function Wallet() {
 
@@ -22,11 +22,16 @@ export default function Wallet() {
       return newCount
     })
   }
+  
+  const router = useRouter()
+  function goBack() {
+    router.back()
+  }
 
   return(
     <>
     <h1 className="my-2 text-center">Wallet</h1>
-    <Link href='./'>Back</Link>
+    <button onClick={goBack}>back</button>
     <div className="h-full w-[92%] m-auto flex gap-10">
       <div 
       className="border-2 border-cyan-600 rounded-xl w-1/2 h-3/4 flex flex-col p-2">

@@ -19,7 +19,7 @@ const mediumLinkList = [
 ]
 
 const hardLinkList = [
-  {id: 1, title: 'Authentication', href: '', decsription: 'ТестАуентификация'},
+  {id: 1, title: 'Authentication', href: '/hard/authentication', decsription: 'ТестАуентификация'},
   {id: 2, title: 'WebSocket', href: '/hard/web-socket', decsription: 'ТестЧат'},
   {id: 3, title: 'Shop', href: '/hard/shop', decsription: 'Магазин'},
 

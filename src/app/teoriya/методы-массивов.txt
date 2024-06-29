@@ -1,6 +1,6 @@
 .forEach
 people = {obj}
-people.forEach(person => console.log(person)) -- выведет все элементы объекта или массива
+people.forEach(person => console.log(person)) -- выведет все элементы объекта или массива. Изменяет изначальный массив
 
 .map
 const newPeople = people.map(person => return 'Hello' ) -- позволяет изменить каждый итерируемый элемент 

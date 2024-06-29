@@ -1,10 +1,32 @@
 'use client'
 import PopoverHeader from "./PopoverHeader"
 import { motion } from "framer-motion"
-import Link from "next/link";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
+const navLinksEasy = [
+  {name: "counter", href: "/easy/counter"},
+  {name: "calculator", href: "/easy/calculator"},
+  {name: "image-slider", href: "/easy/image-slider"},
+  {name: "test-task", href: "/easy/test-task"},
+]
+
+const navLinksMedium = [
+  {name: "animation", href: "/medium/test-animation"},
+  {name: "test-api", href: "/medium/test-api"},
+  {name: "posts-list", href: "/medium/posts-list"},
+]
+
+const navLinksHard = [
+  {name: "authentication", href: "/hard/authentication"},
+  {name: "web-socket", href: "/hard/web-socket"},
+  {name: "shop", href: "/hard/shop"},
+]
 
 export default function header() {
+
+    const pathname = usePathname()
+
     return <>
         <header className="bg-indigo-300 border-b-2 border-indigo-400 shadow-lg p-2">
 
@@ -26,24 +48,16 @@ export default function header() {
                   <div className="px-10 hover:bg-indigo-400 rounded-t">easy</div>
                   <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
                     <div className="flex flex-col text-nowrap">
-                      <li>
-                        <Link href='/easy/counter'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">counter</div>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/easy/calculator'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">calculator</div>
-                        </Link>
-                      </li>
-                        <Link href="/easy/image-slider">
-                          <div className="hover:bg-indigo-300 px-6 rounded">image-slider</div>
-                        </Link>
-                      <li>
-                        <Link href='/easy/test-task'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">test-task</div>
-                        </Link>
-                      </li>
+                      {navLinksEasy.map((link) => {
+                        const isActive = pathname.startsWith(link.href)
+                        return (
+                        <li key={link.name}>
+                          <Link href={link.href}>
+                          <div className={`${isActive ? 'text-indigo-500 font-bold' : ''} hover:bg-indigo-300 px-6 rounded`}
+                          >{link.name}</div>
+                          </Link>
+                        </li>
+                      )})}
                     </div>
                   </ul>
                 </li>
@@ -51,21 +65,16 @@ export default function header() {
                   <div className="px-10 hover:bg-indigo-400 rounded-t">medium</div>
                   <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
                     <div className="flex flex-col text-nowrap">
-                      <li>
-                        <Link href='/medium/test-animation'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">test-animation</div>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/medium/test-api'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">test-api</div>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/medium/posts-list'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">posts-list</div>
-                        </Link>
-                      </li>
+                    {navLinksMedium.map((link) => {
+                        const isActive = pathname.startsWith(link.href)
+                        return (
+                        <li key={link.name}>
+                          <Link href={link.href}>
+                          <div className={`${isActive ? 'text-indigo-500 font-bold' : ''} hover:bg-indigo-300 px-6 rounded`}
+                          >{link.name}</div>
+                          </Link>
+                        </li>
+                      )})}
                     </div>
                   </ul>
                 </li>
@@ -73,21 +82,16 @@ export default function header() {
                   <div className="px-10 hover:bg-indigo-400 rounded-t">hard</div>
                   <ul className="absolute hidden bg-slate-600 text-white p-6 group-hover:block">
                     <div className="flex flex-col text-nowrap">
-                      <li>
-                        <Link href='/hard/'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">_3</div>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/hard/'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">_3</div>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/hard/'>
-                          <div className="hover:bg-indigo-300 px-6 rounded">_3</div>
-                        </Link>
-                      </li>
+                    {navLinksHard.map((link) => {
+                        const isActive = pathname.startsWith(link.href)
+                        return (
+                        <li key={link.name}>
+                          <Link href={link.href}>
+                          <div className={`${isActive ? 'text-indigo-500 font-bold' : ''} hover:bg-indigo-300 px-6 rounded`}
+                          >{link.name}</div>
+                          </Link>
+                        </li>
+                      )})}
                     </div>
                   </ul>
                 </li>
