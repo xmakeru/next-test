@@ -26,8 +26,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, ".next/types/app/medium/infinity-scroll/page.js"  ],
+    "**/*.tsx"],
   "exclude": [
     "node_modules"
   ]
