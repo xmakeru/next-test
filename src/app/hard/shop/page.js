@@ -43,7 +43,7 @@ export default function Shop() {
     setCurrentPage(pageNumber)
   }
 
-  
+
 
 const handleSearch = (e) => {
     e.preventDefault()
@@ -91,9 +91,15 @@ const handleSearch = (e) => {
     setCountMoney(newBalance)
     localStorage.setItem('balance', newBalance.toString())
   }
-
-  return (
+//  const CLICK = () => {
+//   const al = confirm('?')
+//   if (!al) {
+//     throw new Error('!!!')
+//   }
+//  }
+  return (  
     <>
+    {/* <button className=''>CLICK</button> */}
     {/* Корзина */}
     <div className='bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500'>
       <div className='flex items-center gap-4 p-2'>
@@ -142,7 +148,7 @@ const handleSearch = (e) => {
                                 category === 'Popular' ? 'text-red-500 bg-pink-200 rounded-md' : 
                                 category === 'Rare' ? 'text-green-500 bg-yellow-200 rounded-md' : 
                                 category === 'Hot' ? 'text-yellow-500' : ''}
-                                p-1 m-2`}
+                                text-xs p-1 m-2`}
                                 >
                                 {category}
                                 </h4>

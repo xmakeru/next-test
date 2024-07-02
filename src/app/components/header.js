@@ -15,6 +15,7 @@ const navLinksMedium = [
   {name: "animation", href: "/medium/test-animation"},
   {name: "test-api", href: "/medium/test-api"},
   {name: "posts-list", href: "/medium/posts-list"},
+  {name: "infinity-scroll", href: "/medium/infinity-scroll"},
 ]
 
 const navLinksHard = [
@@ -105,14 +106,17 @@ export default function Header() {
 
             </div>
 
-            <div className="hidden sm:block">
-              <motion.button className="bg-fuchsia-300 text-slate-100 px-5 py-2 rounded-3xl border-2 border-fuchsia-500"
+            <Link 
+            className="hidden sm:block px-5 py-2 rounded-3xl"
+            href="https://github.com/xmakeru/next-test"
+            target="_blank">
+              <motion.div className="bg-fuchsia-300 text-slate-100 px-5 py-2 rounded-3xl border-2 border-fuchsia-500"
               whileTap={{scale: 0.9}}
               whileHover={{scale:1.1, backgroundColor: 'rgb(217 70 239)', color: 'black'}}
               transition={{bounceDamping: 10, bounceStiffness: 600}}
-              >sign In
-              </motion.button>
-            </div>
+              ><p>GitHub</p>
+              </motion.div>
+            </Link>
 
           </nav>
         </header>

@@ -8,7 +8,7 @@ const easyLinkList = [
   {id: 1, title: 'Counter', href: '/easy/counter', decsription: 'Счетчик'},
   {id: 2, title: 'Calculator', href: '/easy/calculator', decsription: 'Калькулятор'},
   {id: 3, title: 'ImageSlider', href: '/easy/image-slider', decsription: 'Слайдер картинок'},
-  {id: 4, title: 'TaskTest', href: '/easy/task-test', decsription: 'Список задач с LocalStorage'},
+  {id: 4, title: 'TaskTest', href: '/easy/test-task', decsription: 'Список задач с LocalStorage'},
   {id: 5, title: 'CatchAllSegmets', href: '/easy/catch-all-segments', decsription: 'В разработке'},
 ]
 
@@ -16,6 +16,7 @@ const mediumLinkList = [
   {id: 1, title: 'TestAnimation', href: '/medium/test-animation', decsription: 'В разработке'},
   {id: 2, title: 'TestApi', href: '/medium/test-api', decsription: 'Список курса крипты. Курс неактуален. Дело в апи, но тут важен сам концепт + данные тянутся каждые 10 минут'},
   {id: 3, title: 'PostsList', href: '/medium/posts-list', decsription: 'Список постов с поиском. Установлен setTimeout на 1 секунду для имитации загрузки при поиске'},
+  {id: 3, title: 'InfinityScroll', href: '/medium/infinity-scroll', decsription: ''},
 ]
 
 const hardLinkList = [

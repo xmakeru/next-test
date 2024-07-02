@@ -14,7 +14,7 @@ export default function TestAnimation() {
     const progress = useTransform(scrollYProgress, [0, 1], [0, 100]) // прогресс прокрутки, из 0-1 выводим в 0-100
     const [progressValue, setProgressValue] = useState(0)
     const time = useTime();
-    const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
+    const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false })
 
   useEffect(() => {
     const changes = progress.on("change", (e) => setProgressValue(e.toFixed(0)))
