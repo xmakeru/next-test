@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './swiper-styles.css'; // Импортируем файл стилей
+import './swiper-styles.css'
 import Image from 'next/image'
 
 export default function ImageSlider({imageUrls}) {
@@ -21,7 +21,7 @@ export default function ImageSlider({imageUrls}) {
       >
        {imageUrls.map((imageUrl, index) => (
         <SwiperSlide key={index}>
-           <Image src={imageUrl}></Image> 
+           <Image src={imageUrl}  alt="photo"/>
         </SwiperSlide>
        ))} 
       </Swiper>

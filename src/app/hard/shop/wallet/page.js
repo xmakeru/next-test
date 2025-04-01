@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import anton from '../../../../../public/anton.jpg'
+
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
@@ -49,9 +49,7 @@ export default function Wallet() {
         className='hover:scale-105 active:scale-75 transition-all duration-200'
         onClick={addMoney}>
         <div className="relative w-60 h-60 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-lg">
-          <Image 
-            src={anton} 
-            alt="Монета"
+          <div
             width={300} 
             height={300} 
             className="rounded-full object-cover w-full h-full"

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from 'next/link'
 
 export default function Search({ posts }) {
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('') //текст поискового запроса
     const [filteredPosts, setFilteredPosts] = useState(posts)
     const [loading, setLoading] = useState(false)
 

@@ -91,17 +91,12 @@ const handleSearch = (e) => {
     setCountMoney(newBalance)
     localStorage.setItem('balance', newBalance.toString())
   }
-//  const CLICK = () => {
-//   const al = confirm('?')
-//   if (!al) {
-//     throw new Error('!!!')
-//   }
-//  }
+
   return (  
     <>
-    {/* <button className=''>CLICK</button> */}
+    
     {/* Корзина */}
-    <div className='bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500'>
+    <div className='bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 min-h-screen'>
       <div className='flex items-center gap-4 p-2'>
         <Popover>
           <PopoverButton>

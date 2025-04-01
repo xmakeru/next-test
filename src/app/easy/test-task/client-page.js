@@ -1,7 +1,7 @@
 'use client'
 import Input from "./components/Input"
 import { motion } from "framer-motion"
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 export default function TaskTest() {
 
@@ -98,10 +98,10 @@ export default function TaskTest() {
                 <div className="flex justify-between">
                   <p className="break-all text-xl" style={e.status ? {textDecoration: 'line-through'} : {textDecoration: 'none'}}>{e.value}</p>
                   <svg data-slot="icon" fill="none" onClick={() => toggleStatusTask(e.id)}
-                  stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" 
+                  strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24" 
                   className="min-w-10 w-10 hover:bg-slate-500 rounded-md h-full active:scale-75 transition"
                   xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
                   </svg>
                 </div>
                 <button 

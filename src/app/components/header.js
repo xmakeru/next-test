@@ -15,7 +15,6 @@ const navLinksMedium = [
   {name: "animation", href: "/medium/test-animation"},
   {name: "test-api", href: "/medium/test-api"},
   {name: "posts-list", href: "/medium/posts-list"},
-  {name: "infinity-scroll", href: "/medium/infinity-scroll"},
 ]
 
 const navLinksHard = [
