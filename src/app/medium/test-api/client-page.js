@@ -1,12 +1,10 @@
+export const revalidate = 3600
 async function fetchData() {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    const response = await fetch(`${baseUrl}/api/crypto`, {
-      next: { revalidate: 600 }
-    });
-
-    return await response.json();
+    const response = await fetch(`${baseUrl}/api/crypto`);
+    return await response.json()
+    
   } 
-
 
 export default async function TestApi() {
     const { data } = await fetchData()

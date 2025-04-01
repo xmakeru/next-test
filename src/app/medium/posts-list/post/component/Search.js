@@ -15,7 +15,7 @@ export default function Search({ posts }) {
     const handleSearch = async(e) => {
         e.preventDefault()
         setLoading(true)
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        await new Promise(resolve => setTimeout(resolve, 1000)) // промис, которые автоматически выполняется (resolve) через секунду
 
         
         const filtered = posts.filter(post => 
