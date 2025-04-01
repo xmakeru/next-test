@@ -1,8 +1,10 @@
 import Search from './Search'
 
+
 async function fetchData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')  // получаем данные с url 
-   // преобразовываем в json
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    next: { revalidate: 60 }}
+  ) 
   return res.json()
 }
 

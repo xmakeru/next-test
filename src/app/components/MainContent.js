@@ -13,7 +13,7 @@ const easyLinkList = [
 
 const mediumLinkList = [
   {id: 1, title: 'TestAnimation', href: '/medium/test-animation', decsription: 'В разработке'},
-  {id: 2, title: 'TestApi', href: '/medium/test-api', decsription: 'Список курса крипты. Курс неактуален. Дело в апи, но тут важен сам концепт + данные тянутся каждые 10 минут'},
+  {id: 2, title: 'TestApi', href: '/medium/test-api', decsription: 'Список курса крипты. Курс неактуален, т.к данные в источнике не обновляются'},
   {id: 3, title: 'PostsList', href: '/medium/posts-list', decsription: 'Список постов с поиском. Установлен setTimeout на 1 секунду для имитации загрузки при поиске'},
 ]
 

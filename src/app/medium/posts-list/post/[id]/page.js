@@ -1,14 +1,17 @@
 
 import Post from "../component/Post"
+export const revalidate = 60
 
 export async function generateStaticParams() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts')
   const posts = await response.json()
   
   return posts.map(post => ({
-    slug: post.id.toString(), 
+    id: post.id.toString(), 
   }))
 }
+
+
 
 export async function generateMetadata({params}) {
   const { id } = params
@@ -20,9 +23,8 @@ export async function generateMetadata({params}) {
 }
 
 async function fetchData(id) {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,
-      
-    )   
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)  
+ 
     return res.json()
   }
 
